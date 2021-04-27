@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap.css" rel="stylesheet">
+	<link href="index.css" rel="stylesheet">
+	<title>site</title>
+	<style>
+		a{
+			color:none;
+			text-decoration: none;
+		}
+		.aa{
+			text-decoration: none
+		}
+		.buttonn:hover a{
+			color:white;
+		}
+		.buttonn:hover {
+			background-color:red;
+		}
+		.aa{
+			transform: skewX(20deg);
+			transition: 1s;
+			color:black;
+			font-size:2vw;
+			font-family:ProximaNova-Bold;
+		}
+		.buttonn{
+			transform: skewX(-20deg);
+			background: #FF4500;
+			width:40%;
+			height:80%;
+			transition: 1s;
+		}
+		.product{
+			display:inline-block;
+			width:300px;
+			height:280px;
+			margin:20px;
+			overflow: hidden;
+			border:1px solid #a8a8a8;
+			border-radius:10px;
+			transition: 0.3s;
+		}
+		.product img{		
+			width:298px;
+			height:auto;
+			padding:10px;
+			transition: 0.3s;
+		}
+		.product:hover{
+			transform: scale(1.1) !important;
+		}
+		@media screen and (max-width:400px){
+			.product{
+				margin-left:0px;
+				margin-right:0px;
+			}
+		}
+		.readmore{
+			width:100%;
+			height:100%;
+			background:#FF4500;
+			transform:skewX(-20deg);
+		}
+		.readmore a{
+			width:100%;
+			height:100%;
+			transform:skewX(20deg);
+			font-family:ProximaNova-Bold;
+			color:white;
+			font-size:40px;
+			display:flex;
+		}
+		.readmore:before {
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,0);  
+			width: 0;
+			height: 100%;
+			background-color:red;
+			border-radius: 5px;
+			transition: 1s;
+		}
+		.readmore:hover:before {
+			width:100%;
+		}
+		.buybutton{
+			display:flex;
+			cursor: pointer;
+			margin-top:6%;
+			width:60%;
+			height:15%;
+			background:#FF4500;
+			transform:skewX(-20deg);
+		}
+		.buybutton span{
+			transform:skewX(20deg);
+			font-family:ProximaNova-Bold;
+			color:white;
+			font-size:40px;
+			display:flex;
+		}
+		.inbuybox1 span{
+			font-size:30px;
+		}
+		.buybutton:before {
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,0);  
+			width: 0;
+			height: 100%;
+			background-color:red;
+			border-radius: 5px;
+			transition: 1s;
+		}
+		.buybutton:hover:before {
+			width:100%;
+		}
+		.readmoremain{
+			align-items: center;justify-content: center;margin-top:6%;
+			margin-right:10px;
+			margin-left:10px;
+			margin-bottom:4%;
+			max-width:50%;
+			height:100px
+		}
+		@media screen and (max-width:900px){
+			.inbuybox1 span{
+				font-size:20px;
+			}
+		}
+		@media screen and (max-width:450px){
+			.buybutton span{
+				font-size:30px;
+			}
+		}
+		@media screen and (max-width:700px){
+			.readmore a{
+				font-size:36px;
+			}
+		}
+		@media screen and (max-width:600px){
+			.readmore a{
+				font-size:32px;
+			}
+		}
+		@media screen and (max-width:530px){
+			.readmore a{
+				font-size:29px;
+			}
+
+		}
+		@media screen and (max-width:450px){
+			.readmore a{
+				font-size:26px;
+			}
+			.readmoremain{
+			max-width:80%;
+			margin-right:0px;
+			margin-left:0px;
+			height:60px;
+			}
+		}
+
+		</style>
+		    <link rel="stylesheet" href="aos.css">
+</head>
+<body id="body" style="margin:0;padding:0;height:100%;width:100%;overflow-x:hidden;">
+	<script src="anime.js"></script>
+	<script>
+	function showDiv() {
+   document.getElementById('darkoverlay').style.display = "flex";
+   document.getElementById('buybox').style.display = "flex";
+   document.getElementById('buybox').style.left = "20%";
+   anime({
+  targets: '#buybox',
+  left: '50%',
+  duration: '1000'
+		});
+	}
+	function closeDiv() {
+		anime({
+  targets: '#buybox',
+  left: '90%',
+  duration: '600'
+		});
+		setTimeout(function(){
+    document.getElementById('darkoverlay').style.display = "none";
+    document.getElementById('buybox').style.display = "none";
+    document.getElementById('last').style.display = "none";
+    document.getElementById('buybox').style.height = "400px";
+}, 150);   
+	}
+	function press(){
+	   document.getElementById('buybox').style.height = "420px";
+	   document.getElementById('last').style.display = "flex";
+	       document.getElementById('emailinput').value = "";	
+	}
+</script>
+	<div class="header justify-content-center" style="display:flex;background-image:url(slide1.jpg);background-size:cover;height:100vh">
+			<div class="container align-self-center justify-content-center" style="display:grid;max-width:650px;padding-left:5%;" data-aos="fade-right" data-aos-duration="2000">
+				<div class="name align-self-center">
+					<span class="combex" style="color:#ff781f">COMB</span><span class="combex" style="color:white;">EX</span>
+				</div>
+				<div class="buttonn btn justify-content-center align-items-center" style="display:flex;">
+					<a onclick="showDiv()" class="aa">ЗАКАЗАТЬ</a>
+				</div>
+			</div>
+			<div class="imgg align-self-center" data-aos="fade-left" data-aos-duration="2000">
+				<img src="honeycomb.png" class="img-fluid">
+			</div>
+			<div id="darkoverlay" class="justify-content-center align-items-center"></div>
+			<div id="buybox" class="container align-items-center justify-content-center">
+				<div class="close" onclick="closeDiv()"></div>
+				<div style="display:flex;flex-wrap:wrap;" class="align-items-center justify-content-center">
+					<div class="inbuybox1 justify-content-center align-items-center">
+						<span align="center" style="font-family:ProximaNova-Bold;transform: skewX(10deg);padding-left:3%;padding-right:3%;padding-bottom:2%;padding-top:2%;" class="ainbox">Оставьте свои данные и мы обязательно с вами свяжемся</span>
+					</div>
+					<input id="emailinput" placeholder="Ваш e-mail" value="">
+					<div class="buybutton align-items-center justify-content-center" onclick="press()">
+						<span class="justify-content-center align-items-center" style="display:flex">ЗАКАЗАТЬ</span>
+					</div>
+					<span id="last">Письмо отправлено на ваш e-mail</span>
+				</div>
+
+			</div>
+	</div>
+	<div class="slide2 justify-content-center align-items-center" style="display:flex;">
+		<div class="cont1 container align-self-center align-items-center justify-content-center" style="display:flex;">
+			<span class="desc" align="center" style="max-width:600px;display:inline-grid" data-aos="fade-right" data-aos-duration="1300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et pharetra pharetra massa massa ultricies mi quis. Orci eu lobortis elementum nibh tellus. At quis risus sed vulputate.</span>
+			<div class="desc2" data-aos="fade-left" data-aos-duration="1300">
+					<div class="mark align-items-center" style="display:flex;"><img src="tick.png" width="32px" style="margin-right:5px"><span>Высший уровень качества</span></div>
+					<div class="mark align-items-center" style="display:flex;"><img src="tick.png" width="32px" style="margin-right:5px"><span>Высший уровень качества</span></div>
+					<div class="mark align-items-center" style="display:flex;"><img src="tick.png" width="32px" style="margin-right:5px"><span>Высший уровень качества</span></div>
+					<div class="mark align-items-center" style="display:flex;"><img src="tick.png" width="32px" style="margin-right:5px"><span>Высший уровень качества</span></div>
+					<div class="mark align-items-center" style="display:flex;"><img src="tick.png" width="32px" style="margin-right:5px"><span>Высший уровень качества</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="slide3 justify-content-center align-items-center">
+		<div class="productlist row align-items-center justify-content-center" style="display:flex;max-width:1020px">
+			<div class="product container" data-aos="zoom-in" data-aos-duration="1000"><img src="med1.jpg">
+				<div class="productname justify-content-center align-items-center">
+					<span class="productnametext">Мёд горчичный</span>
+			</div>
+			</div>
+			<div class="product container" data-aos="zoom-in" data-aos-duration="1000"><img src="med1.jpg" width="288px">
+				<div class="productname justify-content-center align-items-center">
+					<span class="productnametext">Мёд горчичный</span>
+			</div>
+			</div>
+			<div class="product container" data-aos="zoom-in" data-aos-duration="1000"><img src="med1.jpg" width="288px">
+				<div class="productname justify-content-center align-items-center">
+					<span class="productnametext">Мёд горчичный</span>
+			</div>
+			</div>
+			<div class="product container" data-aos="zoom-in" data-aos-duration="1000"><img src="med1.jpg">
+				<div class="productname justify-content-center align-items-center">
+					<span class="productnametext">Мёд горчичный</span>
+			</div>
+			</div>
+			<div class="product container" data-aos="zoom-in" data-aos-duration="1000"><img src="med1.jpg">
+				<div class="productname justify-content-center align-items-center">
+					<span class="productnametext">Мёд горчичный</span>
+				</div>
+			</div>
+			<div class="product container" data-aos="zoom-in" data-aos-duration="1000"><img src="med1.jpg">
+				<div class="productname justify-content-center align-items-center">
+					<span class="productnametext">Мёд горчичный</span>
+				</div>
+			</div>
+			<div class="readmoremain" data-aos-duration="1000" data-aos="zoom-out" style="">
+			<div onclick="showDiv()" class="readmore align-items-center justify-content-center" style="display:flex;cursor:pointer;">
+				<a class="readmorea align-items-center justify-content-center">ПОДРОБНЕЕ</a>
+			</div>
+		</div>
+		</div>
+	</div>
+		<div class="bottomblock">
+			<div class="footer">
+				<div class="infooter"><span class="infootertext">email@gmail.com</span></div>
+				<div class="infooter"><span class="infootertext">email@gmail.com</span></div>
+				<div class="infooter"><span class="infootertext">email@gmail.com</span></div>
+			</div>
+		</div>
+    <script src="aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
