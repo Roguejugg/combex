@@ -174,12 +174,6 @@
 </head>
 <body id="body" style="margin:0;padding:0;height:100%;width:100%;overflow-x:hidden;">
 	<script src="anime.js">
-		window.onload = function () {
-			window.setTimeout(function () {
-      document.getElementById('preloaderbg').style.display = "none";
-      document.getElementById('preloader').style.display = "none";
-    }, 500);
-		}
 	</script>
 	<script>
 	function showDiv() {
@@ -210,8 +204,14 @@
 	   document.getElementById('last').style.display = "flex";
 	       document.getElementById('emailinput').value = "";	
 	}
+	window.onload = function () {
+			window.setTimeout(function () {
+      document.getElementById('preloaderbg').style.display = "none";
+      document.getElementById('preloader').style.display = "none";
+    }, 500);
+		}
 </script>
-<div id="preloaderbg"><img src="preloader.gif"></div>
+<div id="preloaderbg"><img id="preloader" src="preloader.gif"></div>
 	<div class="header justify-content-center" style="display:flex;background-image:url(slide1.jpg);background-size:cover;height:100vh">
 			<div class="container align-self-center justify-content-center" style="display:grid;max-width:650px;padding-left:5%;" data-aos-once="true" data-aos="fade-right" data-aos-duration="2000">
 				<div class="name align-self-center">
