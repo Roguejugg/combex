@@ -186,7 +186,7 @@
 			color:#e1ff00;
 			font-size:18px;
 		}
-		.preloaderbg{
+		#preloaderbg{
 			z-index: 99999;
 			width:100vw;
 			height:100vh;
@@ -194,6 +194,8 @@
 			position:fixed;
 			align-items:center;
 			justify-content:center;
+top:0;
+left:0;
 		}
 		@media screen and (max-width:900px){
 			#buybox{
