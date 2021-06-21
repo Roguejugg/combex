@@ -203,7 +203,13 @@
 	   document.getElementById('last').style.display = "flex";
 	       document.getElementById('emailinput').value = "";	
 	}
+window.onload = function(){
+window.setTimeout(function(){documentgetelementbyid('preloaderbg').style.display = "none";
+{documentgetelementbyid('preloader').style.display = "none";}, 500);}
 </script>
+	<div id="preloaderbg">
+<img id="preloader" src="preloader.gif">
+</div>
 	<div class="header justify-content-center" style="display:flex;background-image:url(slide1.jpg);background-size:cover;height:100vh">
 			<div class="container align-self-center justify-content-center" style="display:grid;max-width:650px;padding-left:5%;" data-aos-once="true" data-aos="fade-right" data-aos-duration="2000">
 				<div class="name align-self-center">
