@@ -203,9 +203,13 @@
 	   document.getElementById('last').style.display = "flex";
 	       document.getElementById('emailinput').value = "";	
 	}
-window.onload = function(){
-window.setTimeout(function(){documentgetelementbyid('preloaderbg').style.display = "none";
-{documentgetelementbyid('preloader').style.display = "none";}, 500);}
+		window.onload = function () {
+			window.setTimeout(function () {
+      document.getElementById('preloaderbg').style.display = "none";
+      document.getElementById('preloader').style.display = "none";
+    }, 500);
+   			
+  		}
 </script>
 	<div id="preloaderbg">
 <img id="preloader" src="preloader.gif">
