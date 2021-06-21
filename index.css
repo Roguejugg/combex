@@ -186,6 +186,15 @@
 			color:#e1ff00;
 			font-size:18px;
 		}
+		.preloaderbg{
+			z-index: 99999;
+			width:100vw;
+			height:100vh;
+			display:flex;
+			position:fixed;
+			align-items:center;
+			justify-content:center;
+		}
 		@media screen and (max-width:900px){
 			#buybox{
 				width:400px;
